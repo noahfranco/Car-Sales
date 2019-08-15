@@ -11,16 +11,16 @@ import { Provider } from "react-redux";
 import 'bulma/css/bulma.css';
 import './styles.scss';
 
-// Redux
+// Seting up Store
 export const store = createStore(carReducer); 
-// Redux
+
 
 const rootElement = document.getElementById('root');
 
-// wrap provider around <App /> like I would wrap Router around <App /> 
+// Setting up provider and wraping it around <App /> 
 
 ReactDOM.render(
-    <Provider> 
+    <Provider store={store}> 
 <App />
     </Provider> 
 , rootElement);

@@ -1,3 +1,4 @@
+// Setting up reducer and initial state 
 
 const initialState = {
         additionalPrice: 0,
@@ -18,7 +19,18 @@ const initialState = {
 
 export const carReducer = (state = initialState, action) => {
     switch (action.type) {
-        default: return state
+        case "ADD_FEATURE":
+        return {
+            ...state, 
+            car: action.payload
+        }
+        case "REMOVE_FEATURE":
+        return {
+            ...state, 
+            car: state.car.filter(features => !features.completed)
+        }
+        default: 
+            return state; 
     }
 }
 
