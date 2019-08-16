@@ -12,7 +12,7 @@ import 'bulma/css/bulma.css';
 import './styles.scss';
 
 // Seting up Store
-export const store = createStore(carReducer); 
+ const store = createStore(carReducer); 
 
 
 const rootElement = document.getElementById('root');
